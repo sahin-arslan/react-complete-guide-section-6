@@ -11,11 +11,11 @@ const CourseInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    props.onAddGoald(enteredValue);
+    props.onAddGoal(enteredValue);
   };
 
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <div className="form-control">
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
